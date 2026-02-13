@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Darling (R) ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background: linear-gradient(-45deg, #ff4e8a, #ff99cc, #ff1a75, #ff66b2);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    margin-top: 25vh;
+    font-size: 40px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fff; }
+    to { text-shadow: 0 0 30px #ff1493; }
+}
+
+p {
+    font-size: 22px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff1493;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: pink;
+}
+
+.heart, .rose, .sparkle {
+    position: absolute;
+    bottom: -20px;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+.letterBox {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: #ff1493;
+    padding: 25px;
+    border-radius: 20px;
+    display: none;
+    width: 80%;
+    max-width: 300px;
+}
+
+.ring {
+    font-size: 50px;
+    margin-top: 20px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Darling (R), Will You Be My Valentine? ❤️</h1>
+<p>Forever Yours, Husband 💕<br>I Love You So Much ✨</p>
+
+<button onclick="openLetter()">Open My Love Letter 💌</button>
+
+<div class="letterBox" id="letter">
+    <h3>My Darling (R) 💖</h3>
+    <p>You are my happiness, my smile, and my forever.  
+    Every heartbeat says your name.  
+    Will you always be mine? 💕</p>
+    <div class="ring">💍</div>
+</div>
+
+<!-- Romantic Music -->
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function createElement(symbol, className, interval, sizeMin, sizeMax) {
+    setInterval(() => {
+        const el = document.createElement("div");
+        el.className = className;
+        el.innerHTML = symbol;
+        el.style.left = Math.random() * 100 + "vw";
+        el.style.fontSize = (Math.random() * (sizeMax - sizeMin) + sizeMin) + "px";
+        el.style.animationDuration = (Math.random() * 3 + 4) + "s";
+        document.body.appendChild(el);
+        setTimeout(() => { el.remove(); }, 7000);
+    }, interval);
+}
+
+createElement("❤️", "heart", 200, 15, 35);
+createElement("🌹", "rose", 800, 20, 30);
+createElement("✨", "sparkle", 300, 10, 20);
+
+function openLetter() {
+    document.getElementById("letter").style.displ
+
